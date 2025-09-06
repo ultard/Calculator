@@ -4,7 +4,7 @@ string? pendingOperation = null; // Ожидаемая операция для �
 var isNewInput = true;  // Флаг для ввода нового числа
 
 Console.WriteLine("Классический калькулятор на C#. Введите 'exit' для выхода.");
-Console.WriteLine("Поддерживаемые операции: +, -, *, /, %, 1/x, x^2, sqrt, M+, M-, MR, OP");
+Console.WriteLine("Поддерживаемые операции: +, -, *, /, %, 1/x, x^2, sqrt, M+, M-, MR, MC, OP");
 
 while (true)
 {
@@ -84,6 +84,12 @@ while (true)
             break;
 
         case "MR":
+            currentValue = memory;
+            Console.WriteLine($"Текущее значение из памяти: {currentValue}");
+            break;
+        
+        case "MC":
+            memory = 0;
             currentValue = memory;
             Console.WriteLine($"Текущее значение из памяти: {currentValue}");
             break;
